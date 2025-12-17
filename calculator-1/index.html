@@ -1,0 +1,49 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="cal">
+<input type="text" id="input" class="input">
+<div>
+<button type="button" onclick="clearinput()">C</button>
+<button type="button" onclick="appendvalue('/')">/</button>
+<button type="button" onclick="appendvalue('*')">*</button>
+<button type="button" onclick="deletedata()">DEL</button>
+<button type="button" onclick="appendvalue('7')">7</button>
+<button type="button" onclick="appendvalue('8')">8</button>
+<button type="button" onclick="appendvalue('9')">9</button>
+<button type="button" onclick="appendvalue('-')">-</button>
+<button type="button" onclick="appendvalue('4')">4</button>
+<button type="button" onclick="appendvalue('5')">5</button>
+<button type="button" onclick="appendvalue('6')">6</button>
+<button type="button" onclick="appendvalue('+')">+</button>
+<button type="button" onclick="appendvalue('1')">1</button>
+<button type="button" onclick="appendvalue('2')">2</button>
+<button type="button" onclick="appendvalue('3')">3</button>
+<button type="button" onclick="calculate()">=</button>
+<button type="button" onclick="appendvalue('0')">0</button>
+<button type="button" onclick="appendvalue('.')">.</button>
+</div>
+</div>
+<script>
+const input = document.getElementById("input");
+function appendvalue(num)
+{
+input.value+=num;
+}
+function calculate()
+{
+input.value=eval(input.value)
+}
+function clearinput()
+{
+input.value='';
+}
+function deletedata()
+{
+input.value=input.value.slice(0,-1)
+}
+</script>
+</body>
+</html>
