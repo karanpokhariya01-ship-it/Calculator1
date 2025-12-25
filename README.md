@@ -1,2 +1,2 @@
 # Calculator1
-Calculator usin html,css and javascript
+Calculator using html
